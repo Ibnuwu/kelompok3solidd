@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="id">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Kasir Sederhana</title>
+  <link href="styles.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header class="site-header">
+    <h1>Kasir Sederhana</h1>
+  </header>
+
+  <main class="container">
+    <section class="left">
+      <div class="cart-card">
+        <h2>Daftar Pesanan</h2>
+        <div class="cart-list" id="cart-list">
+          <p class="empty">Keranjang kosong — tambahkan produk dari sebelah kanan.</p>
+        </div>
+        <div class="cart-footer">
+          <div class="total">
+            <span>Total</span>
+            <strong id="total-display">Rp0</strong>
+          </div>
+          <div class="cart-actions">
+            <button id="clear-btn" class="btn btn-ghost">Kosongkan</button>
+            <button id="pay-btn" class="btn btn-primary">Bayar</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="right">
+      <h2 class="sr">Produk</h2>
+      <div class="products-grid" id="products-grid"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">Kasir Sederhana Kelompok 3</footer>
+
+  <!-- Modal struk -->
+  <div class="modal" id="receipt-modal" aria-hidden="true">
+    <div class="modal-content" role="dialog" aria-modal="true">
+      <header>
+        <h3>Struk Pembayaran</h3>
+        <button class="close" id="close-receipt">&times;</button>
+      </header>
+      <div class="receipt-body" id="receipt-body"></div>
+      <footer>
+        <button class="btn btn-primary" id="print-btn">Cetak / Simpan</button>
+        <button class="btn btn-ghost" id="close-btn">Tutup</button>
+      </footer>
+    </div>
+  </div>
+
+  <!-- Popup Stardew-style -->
+  <div id="popup-overlay" class="popup-overlay hidden" onclick="closePopup(event)">
+    <div class="popup-box">
+      <img id="popup-character" src="reze.png" alt="Character" class="popup-character" />
+      <div class="popup-dialog">
+        <p id="popup-text" class="popup-text"></p>
+        <div class="popup-buttons" id="popup-buttons"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
